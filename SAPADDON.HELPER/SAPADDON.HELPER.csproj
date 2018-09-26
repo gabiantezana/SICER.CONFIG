@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{13D4882C-0F73-426A-AE2E-C83CBA117FBF}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>SICER.CONFIG</RootNamespace>
-    <AssemblyName>SICER.CONFIG</AssemblyName>
+    <ProjectGuid>{0F298611-9402-4662-86AD-93B93EA0C5FD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAPADDON.HELPER</RootNamespace>
+    <AssemblyName>SAPADDON.HELPER</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,6 +32,11 @@
   <ItemGroup>
     <Reference Include="Interop.SAPbobsCOM">
       <HintPath>..\packages\sapb1\Interop.SAPbobsCOM.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Interop.SAPbouiCOM">
+      <HintPath>..\packages\sapb1\Interop.SAPbouiCOM.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
@@ -46,17 +49,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="AttributeHelper.cs" />
+    <Compile Include="ConstantHelper.cs" />
+    <Compile Include="ConvertHelper.cs" />
+    <Compile Include="NameReaderExtensions.cs" />
+    <Compile Include="EntityHelper.cs" />
+    <Compile Include="EnumHelper.cs" />
+    <Compile Include="QueryHelper.cs" />
+    <Compile Include="SapEntityHelper.cs" />
+    <Compile Include="SapFormHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SapEnumHelper.cs" />
+    <Compile Include="SapIntefaceHelper.cs" />
+    <Compile Include="SapMethodsHelper.cs" />
+    <Compile Include="XMLHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SAPADDON.HELPER\SAPADDON.HELPER.csproj">
-      <Project>{0F298611-9402-4662-86AD-93B93EA0C5FD}</Project>
-      <Name>SAPADDON.HELPER</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SICER.CONFIG.USERMODEL\SICER.CONFIG.USERMODEL.csproj">
       <Project>{582068AC-EA91-47D4-BC62-B5BDBEDACC2E}</Project>
       <Name>SICER.CONFIG.USERMODEL</Name>

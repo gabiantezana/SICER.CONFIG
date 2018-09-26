@@ -1,0 +1,22 @@
+﻿<SBO>
+<Companies>
+	<Company>
+		<DBCompany>SBO_JHOMERON</DBCompany>
+		<Server>LAPTOP-GAP\SQL2012</Server>
+		<DBUser>sa</DBUser>
+		<DBPassword>root</DBPassword>
+		<SBOUser>manager</SBOUser>
+		<SBOPassword>1234</SBOPassword>
+		<DbServerType>dst_MSSQL2012</DbServerType>
+    </Company>    
+	<Company>
+		<DBCompany>SBO_RASH_CP</DBCompany>
+		<Server>192.168.1.52:30015</Server>
+		<DBUser>SYSTEM</DBUser>
+		<DBPassword>S31d0r2017</DBPassword>
+		<SBOUser>manager</SBOUser>
+		<SBOPassword>seidor</SBOPassword>
+		<DbServerType>dst_HANADB</DbServerType>
+    </Company>    
+</Companies>
+</SBO>

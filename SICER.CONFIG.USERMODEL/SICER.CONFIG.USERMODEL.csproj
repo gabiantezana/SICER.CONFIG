@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{13D4882C-0F73-426A-AE2E-C83CBA117FBF}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>SICER.CONFIG</RootNamespace>
-    <AssemblyName>SICER.CONFIG</AssemblyName>
+    <ProjectGuid>{582068AC-EA91-47D4-BC62-B5BDBEDACC2E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SICER.CONFIG.USERMODEL</RootNamespace>
+    <AssemblyName>SICER.CONFIG.USERMODEL</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -46,21 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="AttributesModel.cs" />
+    <Compile Include="EntityModel.cs" />
+    <Compile Include="MSS_SICER.cs" />
+    <Compile Include="MSS_SICER_CCDEV.cs" />
+    <Compile Include="MSS_SICER_CON.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SAPADDON.HELPER\SAPADDON.HELPER.csproj">
-      <Project>{0F298611-9402-4662-86AD-93B93EA0C5FD}</Project>
-      <Name>SAPADDON.HELPER</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SICER.CONFIG.USERMODEL\SICER.CONFIG.USERMODEL.csproj">
-      <Project>{582068AC-EA91-47D4-BC62-B5BDBEDACC2E}</Project>
-      <Name>SICER.CONFIG.USERMODEL</Name>
-    </ProjectReference>
+    <Compile Include="UserModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
