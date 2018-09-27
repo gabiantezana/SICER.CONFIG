@@ -158,6 +158,13 @@ namespace SICER.CONFIG
                 }
                 else
                 {
+                    Console.WriteLine(xmlNode.CompanyCode);
+                    Console.WriteLine(xmlNode.Server);
+                    Console.WriteLine(xmlNode.DBUser);
+                    Console.WriteLine(xmlNode.DBPassword);
+                    Console.WriteLine(xmlNode.SBOUser);
+                    Console.WriteLine(xmlNode.SBOPassword);
+                    Console.WriteLine(xmlNode.DbServerType);
                     Console.WriteLine(company.CompanyDB + " - " + company.GetLastErrorDescription());
                 }
             }
